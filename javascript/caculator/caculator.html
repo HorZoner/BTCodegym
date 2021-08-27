@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator fake</title>
+  <STYLE>
+    .table_caculator {
+      width: 50%;
+      height: 300px;
+      border-collapse: collapse;
+    }
+    .table_caculator td {
+      padding: 5px;
+      text-align: center;
+    }
+    .table_caculator input[type=text] {
+      width: 100%;
+      height: 50px;
+      text-align: right;
+    }
+    .table_caculator input[type=button] {
+      width: 50px;
+      height: 30px;
+      background-color: #f5f5f5;
+      border: 1px solid #dedede;
+      font-size: 1em;
+    }
+    .table_caculator input[name=equal] {
+      background-color: #4688F8;
+
+    }
+    .table_caculator input[name=nnumb] {
+      background-color: #D2D2D2;
+      border: 1px solid #dedede;
+    }
+  </STYLE>
+</head>
+<body> <table class="table_caculator">
+  <tr>
+    <td colspan="7">
+      <input type="text" id="display" value="" readonly>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input id="btnOParen" type="button" name="nnumb" value="(" onclick="show('(')" >
+    </td>
+    <td>
+      <input id="btnCParen" type="button" name="nnumb" value=")" onclick="show(')')" >
+    </td>
+    <td>
+      <input id="btnPcnt" type="button" name="nnumb" value="%" >
+    </td>
+    <td>
+      <input id="btnAC" type="button" name="nnumb" value="AC" onfocus="display.value=''" >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input id="btn7" type="button" value="7" onclick="show('7')" >
+    </td>
+    <td>
+      <input id="btn8" type="button" value="8" onclick="show('8')" >
+    </td>
+    <td>
+      <input id="btn9" type="button" value="9" onclick="show('9')" >
+    </td>
+    <td>
+      <input id="btnDiv" type="button" name="nnumb" value="/" onclick="show('/')" >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input id="btn4" type="button" value="4" onclick="show('4')" >
+    </td>
+    <td>
+      <input id="btn5" type="button" value="5" onclick="show('5')" >
+    </td>
+    <td>
+      <input id="btn6" type="button" value="6" onclick="show('6')" >
+    </td>
+    <td>
+      <input id="btnMul" type="button" name="nnumb" value="x" onclick="show('*')" >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input id="btn1" type="button" value="1" onclick="show('1')" >
+    </td>
+    <td>
+      <input id="btn2" type="button" value="2" onclick="show('2')" >
+    </td>
+    <td>
+      <input id="btn3" type="button" value="3" onclick="show('3')" >
+    </td>
+    <td>
+      <input id="btnSub" type="button" name="nnumb" value="-" onclick="show('-')" >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input id="btn0" type="button" value="0" onclick="show('0')">
+    </td>
+    <td>
+      <input id="btnPeriod" type="button" value="." onclick="show('.')">
+    </td>
+    <td>
+      <input id="btnEqual" type="button" name="equal" value="=" onclick="answer()" >
+    </td>
+    <td>
+      <input id="btnAdd" type="button" name="nnumb" value="+" onclick="show('+')">
+    </td>
+</table>
+<script src="caculatorjs.js"></script>
+</body>
+
+</body>
+</html>

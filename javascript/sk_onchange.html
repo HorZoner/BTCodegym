@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select new car</title>
+</head>
+<body>
+<select id="myselect" onchange="dosth()">
+  <option value="audi">audi</option>
+  <option value="bwm">bwm</option>
+  <option value="mercedes">mercedes</option>
+  <option value="volvo">volvo</option>
+</select>
+<script>
+    // function dosth(){
+    //     var selectedvalue = document.getElementById("myselect").value;
+    //     alert(selectedvalue);
+    // }
+
+    var selectedelement = document.getElementById("myselect");
+    selectedelement.addEventListener("change", changefunc);
+        function changefunc() {
+            var selectvalue = document.getElementById("myselect").value;
+            alert(selectvalue);
+        }
+</script>
+</body>
+</html>
