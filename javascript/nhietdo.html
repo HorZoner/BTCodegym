@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="celsius" type="number" onchange="convertcelsius()" value="0">°C</td>
+    </tr>
+    <tr>
+        <td>
+            =
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="Fahrenheit" type="text" value="32" readonly>°F
+        </td>
+    </tr>
+</table>
+<script>
+    function convertcelsius() {
+        var C = document.getElementById("celsius").value;
+        var F = document.getElementById("Fahrenheit").value;
+        C = parseInt(C);
+        F = parseInt(F);;
+        F = C * 9/5 + 32;
+    document.getElementById("Fahrenheit").value = F
+    }
+</script>
+
+</body>
+</html>

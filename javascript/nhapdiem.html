@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 70%;
+            height: 50px;
+            border-collapse: inherit;
+            border: 1px solid darkgray;
+        }
+        th {
+            text-align: center;
+            background-color: grey;
+            color: antiquewhite;
+        }
+        td {
+            background-color: lightgray;
+            text-align: center;
+        }
+        input[type=number] {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>vật lý</th>
+        <th>Hóa học</th>
+        <th>Sinh học</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="ly" type="number" placeholder="0" value="">
+        </td>
+        <td>
+            <input id="hoa" type="number" placeholder="0" value="">
+        </td>
+        <td>
+            <input id="sinh" type="number" placeholder="0" value="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Điểm trung bình" style="width: 100%" onclick="trungbinh()">
+        </td>
+        <td colspan="2">
+            <input id="ketqua" type="text" readonly style="width: 100%">
+        </td>
+    </tr>
+</table>
+<script>
+    function trungbinh() {
+        var dly = document.getElementById("ly").value;
+        var dhoa = document.getElementById("hoa").value;
+        var dsinh = document.getElementById("sinh").value;
+        dly = parseInt(dly);
+        dhoa = parseInt(dhoa);
+        dsinh = parseInt(dsinh);
+        var result =  (dly + dhoa + dsinh)/3
+        if ( dly > 10 || dhoa > 10 || dsinh > 10 || dly < 0 || dhoa < 0 || dsinh < 0)  {
+            document.getElementById("ketqua").value = "điểm không hợp lệ"
+        } else document.getElementById("ketqua").value = result + " Điểm";
+    }
+</script>
+
+</body>
+</html>
